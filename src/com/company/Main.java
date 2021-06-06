@@ -9,16 +9,30 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List<Product> basket = new ArrayList<>();
-        basket.add(new Bread("bread", 2.0, LocalDate.now()));
-        basket.add(new Milk("milk", 1.8, 1));
 
-        Double basketWeight = 0.0;
-                for(Product product: basket) {
-                    basketWeight += product.getWeight();
-                }
+        MagicArray magicArray = new MagicArray();
+        magicArray.add(0);
+        magicArray.add(1);
+        magicArray.add(2);
+        magicArray.print();
+        magicArray.add(3);
+        magicArray.add(4);
+        magicArray.add(5);
+        magicArray.add(6);
+        magicArray.print();
 
 
+        //
+//        List<Product> basket = new ArrayList<>();
+//        basket.add(new Bread("bread", 2.0, LocalDate.now()));
+//        basket.add(new Milk("milk", 1.8, 1));
+//
+//        Double basketWeight = 0.0;
+//                for(Product product: basket) {
+//                    basketWeight += product.getWeight();
+//                }
+//
+//
 
 
 
