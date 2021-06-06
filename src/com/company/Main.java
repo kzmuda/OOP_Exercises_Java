@@ -1,5 +1,6 @@
 package com.company;
 
+import java.time.LocalDate;
 import java.util.*;
 
 public class Main {
@@ -8,16 +9,35 @@ public class Main {
 
     public static void main(String[] args) {
 
-        WriteTo writer = new writerToFile();
+        List<Product> basket = new ArrayList<>();
+        basket.add(new Bread("bread", 2.0, LocalDate.now()));
+        basket.add(new Milk("milk", 1.8, 1));
+
+        Double basketWeight = 0.0;
+                for(Product product: basket) {
+                    basketWeight += product.getWeight();
+                }
 
 
-        Player player = new Player("Anna", writer);
-        player.printName();
 
-        GameState gameState = new GameState(writer);
-        gameState.printPlayersCount(10);
-        gameState.printSumOfPoints(1000);
-        Game game = new Game("Game", gameState, Arrays.asList(player), writer);
+
+
+
+
+
+
+
+
+//        WriteTo writer = new writerToFile();
+//
+//
+//        Player player = new Player("Anna", writer);
+//        player.printName();
+//
+//        GameState gameState = new GameState(writer);
+//        gameState.printPlayersCount(10);
+//        gameState.printSumOfPoints(1000);
+//        Game game = new Game("Game", gameState, Arrays.asList(player), writer);
 //        List<Complex> list1 = createComplexList(10);
 //
 //        Collections.sort(list1);
